@@ -17,8 +17,13 @@
 
     <div id="arContainer" style="display: none; width: 100%; height: 100%;">
         <a-scene embedded arjs="sourceType: webcam;">
-            <a-camera position="0 1.6 0"></a-camera>
-            <a-box position="0 0 -2" color="red"></a-box>
+            <a-assets>
+                <a-asset-item id="solarModel" src="post.glb"></a-asset-item>
+            </a-assets>
+            <a-entity gltf-model="#solarModel" position="0 0 -2" scale="0.5 0.5 0.5"></a-entity>
+            <a-camera position="0 1.6 0">
+                <a-cursor></a-cursor>
+            </a-camera>
         </a-scene>
     </div>
 
